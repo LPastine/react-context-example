@@ -1,6 +1,12 @@
+import { useReducer } from 'react';
+import { GameContext } from '../../state/context';
+import { gameReducer } from '../../state/reducer';
+import { initialGameState } from '../../state/state';
+
 const Poker = () => {
+  const [state, dispatch] = useReducer(gameReducer, initialGameState);
   return (
-    <>
+    <GameContext.Provider value={{ state, dispatch }}>
       <div className="Header">
         <header>
           <p>React useReducer and useContext example Poker App</p>
@@ -12,7 +18,7 @@ const Poker = () => {
         <div className="RightPanel">{/* <GameStatus /> */}</div>
       </div>
       <div className="Footer">{/* <AddPlayer /> */}</div>
-    </>
+    </GameContext.Provider>
   );
 };
 
