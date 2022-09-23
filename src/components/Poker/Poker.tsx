@@ -2,6 +2,7 @@ import { useReducer } from 'react';
 import { GameContext } from '../../state/context';
 import { gameReducer } from '../../state/reducer';
 import { initialGameState } from '../../state/state';
+import AddPlayer from '../AddPlayer';
 
 const Poker = () => {
   const [state, dispatch] = useReducer(gameReducer, initialGameState);
@@ -17,7 +18,9 @@ const Poker = () => {
         <div className="MainContentArea">{/* <Players /> */}</div>
         <div className="RightPanel">{/* <GameStatus /> */}</div>
       </div>
-      <div className="Footer">{/* <AddPlayer /> */}</div>
+      <div className="Footer">
+        <AddPlayer />
+      </div>
     </GameContext.Provider>
   );
 };
