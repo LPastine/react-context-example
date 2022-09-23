@@ -3,6 +3,7 @@ import { GameContext } from '../../state/context';
 import { gameReducer } from '../../state/reducer';
 import { initialGameState } from '../../state/state';
 import AddPlayer from '../AddPlayer';
+import GameStatus from '../GameStatus';
 import Players from '../Players';
 import PlayersList from '../PlayersList';
 import './Poker.css';
@@ -23,7 +24,9 @@ const Poker = () => {
         <div className="MainContentArea">
           <Players />
         </div>
-        <div className="RightPanel">{/* <GameStatus /> */}</div>
+        <div className="RightPanel">
+          <GameStatus />
+        </div>
       </div>
       <div className="Footer">
         <AddPlayer />
