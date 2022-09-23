@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { GameContext } from '../../state/context';
 import { setPlayerValue } from '../../state/helpers';
 import { Player, Status } from '../../state/state';
+import './Players.css';
 
 const Players = () => {
   const { state, dispatch } = useContext(GameContext);
