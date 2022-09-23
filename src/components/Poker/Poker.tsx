@@ -3,6 +3,7 @@ import { GameContext } from '../../state/context';
 import { gameReducer } from '../../state/reducer';
 import { initialGameState } from '../../state/state';
 import AddPlayer from '../AddPlayer';
+import PlayersList from '../PlayersList';
 
 const Poker = () => {
   const [state, dispatch] = useReducer(gameReducer, initialGameState);
@@ -14,7 +15,9 @@ const Poker = () => {
         </header>
       </div>
       <div className="ContentArea">
-        <div className="LeftPanel">{/* <PlayersList /> */}</div>
+        <div className="LeftPanel">
+          <PlayersList />
+        </div>
         <div className="MainContentArea">{/* <Players /> */}</div>
         <div className="RightPanel">{/* <GameStatus /> */}</div>
       </div>
