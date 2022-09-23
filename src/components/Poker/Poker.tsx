@@ -4,6 +4,7 @@ import { gameReducer } from '../../state/reducer';
 import { initialGameState } from '../../state/state';
 import AddPlayer from '../AddPlayer';
 import PlayersList from '../PlayersList';
+import './Poker.css';
 
 const Poker = () => {
   const [state, dispatch] = useReducer(gameReducer, initialGameState);
